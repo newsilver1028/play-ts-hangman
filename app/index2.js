@@ -41,7 +41,6 @@ function handleStartButtonsClick() {
   let chanceIndex = 0;
   let correctCount = 0;
   let isCorrect = true;
-  console.log("초기화 된 chance", chanceIndex);
   // 이전 정답 지우기
   while($answerContainer.hasChildNodes()){
     $answerContainer.removeChild($answerContainer.firstChild)
@@ -74,7 +73,6 @@ function handleStartButtonsClick() {
     $answer.className = CLASS_NAME_UNVISIBLE_ANSWER;
 
   });
-  console.log(currentAnswer.length);
 
   function handleAlphabetClick (event) {
     const selectedTarget = event.target.id;
@@ -84,14 +82,12 @@ function handleStartButtonsClick() {
     
     // 게임 오버.
     if (chanceIndex === 9) {
-      console.log("게임 오버 chanceIndex : ", chanceIndex);
       isCorrect = false;
       showResultMeassage(isCorrect);
       return;
     }
     // 모두 정답으로 클릭했을 때.
     if (correctCount === currentAnswer.length - 1) {
-      console.log("모두 정답 chanceIndex : ", chanceIndex);
       isCorrect = true;
       showResultMeassage(isCorrect);
       return;
@@ -100,6 +96,7 @@ function handleStartButtonsClick() {
     // 클릭한 알파벳 판단.
     if (hasCorrectAlphabet.length !== 0) {
       // 맞은 알파벳 색 변경
+      setTimeout(function(){
       $alphabetsWrapper.querySelector("#" + selectedTarget).className = CLASS_NAME_CORRECT_ALPHABET;
       $alphabetsWrapper.querySelector("#" + selectedTarget).removeEventListener("click", handleAlphabetClick, false);
 
@@ -109,25 +106,26 @@ function handleStartButtonsClick() {
       correctAlphabetArray.forEach((el) => {
         el.className = CLASS_NAME_VISIBLE_ANSWER;
         correctCount++;
-        console.log(correctCount);
-      });
+      });},200);
       return;
     }
     if (hasCorrectAlphabet.length === 0) {
       // 틀린 알파벳 색 변경.
-      chanceIndex++;
+      setTimeout(function(){
       hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
-      console.log("selectedTarget : ", selectedTarget, "chanceIndex : ", chanceIndex);
+      chanceIndex++;
       $alphabetsWrapper.querySelector("#" + selectedTarget).className = CLASS_NAME_WRONG_ALPHABET;
       $alphabetsWrapper.querySelector("#" + selectedTarget).removeEventListener("click", handleAlphabetClick, false);
       return;
-    }
+    },200);
+  }
 
   }
 
   // input 정답 여부
   function handleInputButtonClick () {
     const inputValue = $inputAnswer.value;
+    setTimeout(function(){
       if (chanceIndex === 9) {
         isCorrect = false;
         showResultMeassage(isCorrect);
@@ -138,11 +136,9 @@ function handleStartButtonsClick() {
         showResultMeassage(isCorrect);
         return;
       }
-      chanceIndex++;
-      hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
-  
-      console.log("input 오답 chanceIndex : ", chanceIndex);
-  
+        hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
+        chanceIndex++;
+    },200);
     }
 
   function showResultMeassage(isCorrect) {
