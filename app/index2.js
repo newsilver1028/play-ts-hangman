@@ -56,7 +56,7 @@ function handleStartButtonsClick() {
     el.className = CLASS_NAME_UNVISIBLE_HANGMAN;
   });
 
-  // $inputAnswer.value = "";
+  $inputAnswer.value = "";
   $correctMessageWrapper.className = CLASS_NAME_HIDDEN;
   $wrongMessageWrapper.className = CLASS_NAME_HIDDEN;
   $startPageWrapper.className = CLASS_NAME_HIDDEN;
