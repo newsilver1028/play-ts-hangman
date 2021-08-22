@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap" rel="stylesheet">
+  <title>Hangman</title>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <div class="logo">
+      <img src="images/HANGMAN.jpeg" class="logo-img">
+    </div>
+    <div class="wrong-message-wrapper">
+      <img src="images/wrong_message.jpg" class="wrong-message-img">
+      <button type="button" class="start-button" id="restart-button"></button>
+    </div>
+    <div class="correct-message-wrapper">
+      <img src="images/correct_message.jpg" class="correct-message-img">
+      <button type="button" class="start-button" id="restart-button2"></button>
+    </div>
+    <div class="start-page-wrapper">
+      <img src="images/hard18.jpg" class="cover-img">
+      <button type="button" class="start-button" id="start-button"></button>
+    </div>
+    <div class="choose-level-wrapper">
+      <img src="images/normal10.jpg" class="level">
+      <img src="images/hard18.jpg" class="level">
+      <button type="button" class="level-button" id="normal"></button>
+      <button type="button" class="level-button" id="hard"></button>
+    </div>
+    <div class="content-container">
+      <div class="hangman-wrapper">
+        <span class="hangman-img">초기화면</span>
+        <img src="images/normal01.jpg" class="hangman-img" id="normal01">
+        <img src="images/normal02.jpg" class="hangman-img" id="normal02">
+        <img src="images/normal03.jpg" class="hangman-img" id="normal03">
+        <img src="images/normal04.jpg" class="hangman-img" id="normal04">
+        <img src="images/normal05.jpg" class="hangman-img" id="normal05">
+        <img src="images/normal06.jpg" class="hangman-img" id="normal06">
+        <img src="images/normal07.jpg" class="hangman-img" id="normal07">
+        <img src="images/normal08.jpg" class="hangman-img" id="normal08">
+        <img src="images/normal09.jpg" class="hangman-img" id="normal09">
+        <img src="images/normal10.jpg" class="hangman-img" id="normal10">
+      </div>
+      <div class="answer-wrapper">
+        <div class="answer-container"></div>
+      </div>
+      <div class="alphabets-wrapper">
+        <span id="A" class="alphabet">A</span>
+        <span id="B" class="alphabet">B</span>
+        <span id="C" class="alphabet">C</span>
+        <span id="D" class="alphabet">D</span>
+        <span id="E" class="alphabet">E</span>
+        <span id="F" class="alphabet">F</span>
+        <span id="G" class="alphabet">G</span>
+        <span id="H" class="alphabet">H</span>
+        <span id="I" class="alphabet">I</span>
+        <span id="J" class="alphabet">J</span>
+        <span id="K" class="alphabet">K</span>
+        <span id="L" class="alphabet">L</span>
+        <span id="M" class="alphabet">M</span></br>
+        <span id="N" class="alphabet">N</span>
+        <span id="O" class="alphabet">O</span>
+        <span id="P" class="alphabet">P</span>
+        <span id="Q" class="alphabet">Q</span>
+        <span id="R" class="alphabet">R</span>
+        <span id="S" class="alphabet">S</span>
+        <span id="T" class="alphabet">T</span>
+        <span id="U" class="alphabet">U</span>
+        <span id="V" class="alphabet">V</span>
+        <span id="W" class="alphabet">W</span>
+        <span id="X" class="alphabet">X</span>
+        <span id="Y" class="alphabet">Y</span>
+        <span id="Z" class="alphabet">Z</span>
+      </div>
+      <div class="input-answer-wrapper">
+        <input type="text" class="input-answer" placeholder="Write your answer!">
+        <button type="button" class="input-button">👈</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="app/index2.js"></script>
+
+</html>
