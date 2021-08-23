@@ -411,7 +411,7 @@ body {
   .wrong-alphabet {
     font-size: 2rem;
     font-weight: bolder;
-    letter-spacing: 25px;
+    letter-spacing: 20px;
     -ms-user-select: none; 
     -moz-user-select: -moz-none; 
     -khtml-user-select: none; 
@@ -432,7 +432,7 @@ body {
   .input-answer-wrapper {
     display: flex;
     flex-flow: row nowrap;
-    width: 200px;
+    width: 210px;
     height: auto;
     margin: 5px auto;
     background-image: url("../images/input_background.jpg");
@@ -448,7 +448,7 @@ body {
   }
   
   .input-answer {
-    width: 145px;
+    width: 150px;
     padding: 10px;
   }
   
