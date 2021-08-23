@@ -396,7 +396,6 @@ body {
   }
   
   .alphabets-wrapper {
-    margin-top:0px;
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
@@ -409,7 +408,7 @@ body {
   .alphabet,
   .correct-alphabet,
   .wrong-alphabet {
-    font-size: 2rem;
+    font-size: 1.9rem;
     font-weight: bolder;
     letter-spacing: 20px;
     -ms-user-select: none; 
@@ -431,10 +430,11 @@ body {
   
   .input-answer-wrapper {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    justify-content: space-around;
     width: 210px;
     height: auto;
-    margin: 5px auto;
+    margin: 1px auto;
     background-image: url("../images/input_background.jpg");
     background-size: cover;
   }
@@ -448,12 +448,12 @@ body {
   }
   
   .input-answer {
-    width: 150px;
+    width: 140px;
     padding: 10px;
   }
   
   .input-button {
-    width: 20px;
+    width: 30px;
     cursor: pointer;
   }
   
