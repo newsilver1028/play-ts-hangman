@@ -1,5 +1,5 @@
 const answersList = ["VANILLA", "JAVASCRIPT","PYTHON","CONSOLE","BOOLEAN","CHARACTER","PROTOTYPE",
-"FUNCTION","METHOD","UNDEFINED","QUERYSELECTOR","FALSE","LENGTH","CODING","NUMBER","SYMBOL","EVENTLIESTENER",
+"FUNCTION","METHOD","UNDEFINED","FALSE","LENGTH","CODING","NUMBER","SYMBOL",
 "SCOPE","HOISTING","THIS","INSTANCE","OBJECT","PROPERTY","PARAMETER","CLOSURE","NULL","OPERATOR","STRICT","RETURN","STRING","ARRAY"];
 const $hangmanImg = document.querySelectorAll(".hangman-img");
 const hangmanImgArray = Array.prototype.slice.call($hangmanImg);
@@ -149,9 +149,11 @@ function handleStartButtonsClick() {
     });
     $inputButton.removeEventListener("click", handleInputButtonClick);
     if (!isCorrect) {
+      $wrongMessageWrapper.querySelector(".correct-answer").textContent = `answer : ${currentAnswer.join("").replace(/ /g, "")}`
       $wrongMessageWrapper.className = "wrong-message-wrapper";
       return;
     }
+    $correctMessageWrapper.querySelector(".correct-answer").textContent = `answer : ${currentAnswer.join("").replace(/ /g, "")}`
     $correctMessageWrapper.className = "correct-message-wrapper";
   }
 }
@@ -164,3 +166,4 @@ const startButtonsArray = Array.prototype.slice.call($startButtons);
 startButtonsArray.forEach((el) => {
   el.addEventListener("click", handleStartButtonsClick, false);
 });
+

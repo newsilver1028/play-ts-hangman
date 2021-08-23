@@ -161,11 +161,12 @@ body {
 
 .alphabet,
 .correct-alphabet,
-.wrong-alphabet {
+.wrong-alphabet{
   font-size: 3.5rem;
   font-weight: bolder;
   letter-spacing: 30px;
   line-height: 70px;
+  
 }
 
 .correct-alphabet {
@@ -231,6 +232,13 @@ body {
 .wrong-message-img {
   width: 550px;
   margin: 40px auto;
+}
+
+.correct-answer {
+  font-size: 3rem;
+  font-weight: bolder;
+  letter-spacing: 10px;
+  margin: 5px auto;
 }
 
 @media screen and (max-width:414px){
@@ -359,8 +367,7 @@ body {
   .answer-container {
     display: flex;
     justify-content: space-around;
-    flex-flow: row nowrap;
-    /* overflow: auto; */
+    flex-flow: row wrap;
     width: 100%;
     height: auto;
     margin-top: 120px;
@@ -405,7 +412,11 @@ body {
     font-size: 2rem;
     font-weight: bolder;
     letter-spacing: 25px;
-    /* line-height: 70px; */
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none; 
+    -khtml-user-select: none; 
+    -webkit-user-select: none; 
+    user-select: none;
   }
   
   .correct-alphabet {
@@ -470,6 +481,13 @@ body {
   .wrong-message-img {
     width: 80%;
     margin: 30px auto;
+  }
+
+  .correct-answer {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    margin: 10px auto;
   }
   
 }
