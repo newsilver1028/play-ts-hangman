@@ -408,7 +408,7 @@ body {
   .alphabet,
   .correct-alphabet,
   .wrong-alphabet {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: bolder;
     letter-spacing: 20px;
     -ms-user-select: none; 
@@ -448,7 +448,7 @@ body {
   }
   
   .input-answer {
-    width: 140px;
+    width: 130px;
     padding: 10px;
   }
   
