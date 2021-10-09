@@ -1,5 +1,7 @@
 # [Hangman Game]
 
+### Link 👉 https://newsilver1028.github.io/play-hangman.github.io/
+
 ![image](https://user-images.githubusercontent.com/79626675/136659501-9987923e-5884-4946-9c7b-885b470f0369.png)
 
 ### 게임 방법
