@@ -1,6 +1,8 @@
-const answersList = ["VANILLA", "JAVASCRIPT","PYTHON","CONSOLE","BOOLEAN","CHARACTER","PROTOTYPE",
-"FUNCTION","METHOD","UNDEFINED","FALSE","LENGTH","CODING","NUMBER","SYMBOL",
-"SCOPE","HOISTING","THIS","INSTANCE","OBJECT","PROPERTY","PARAMETER","CLOSURE","NULL","OPERATOR","STRICT","RETURN","STRING","ARRAY"];
+const answersList = ["JAVASCRIPT","PYTHON","CONSOLE","BOOLEAN","CHARACTER","PROTOTYPE",
+"FUNCTION","METHOD","UNDEFINED","FALSE","LENGTH","NUMBER","SYMBOL",
+"SCOPE","HOISTING","THIS","INSTANCE","OBJECT","PROPERTY","PARAMETER","CLOSURE","NULL","OPERATOR","STRICT","RETURN","STRING","ARRAY",
+"CALLBACK","VARIABLE","CONSTRUCTOR","ARGUMENTS","ITERABLE","PROMISE"
+];
 const $hangmanImg = document.querySelectorAll(".hangman-img");
 const hangmanImgArray = Array.prototype.slice.call($hangmanImg);
 
@@ -17,6 +19,7 @@ const $hangmanWrapper = document.querySelector(".hangman-wrapper");
 const $answerWrapper = document.querySelector(".answer-wrapper");
 const $answerContainer = document.querySelector(".answer-container");
 const $alphabetsWrapper = document.querySelector(".alphabets-wrapper");
+const $timer = document.querySelector("#timer");
 
 const $alphabets = document.querySelectorAll(".alphabet");
 const $inputAnswerWrapper = document.querySelector(".input-answer-wrapper");
@@ -39,10 +42,23 @@ function handleStartButtonsClick() {
   let chanceIndex = 0;
   let correctCount = 0;
   let isCorrect = true;
+
   // 이전 정답 지우기
   while($answerContainer.hasChildNodes()){
     $answerContainer.removeChild($answerContainer.firstChild)
   }
+
+  // 타이머 기능
+  let sec = 10;
+  const timer = setInterval(function(){
+    $timer.innerHTML = sec;
+    sec -=1;
+    if(sec === -1){
+      hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
+      chanceIndex++;
+      sec = 10;
+    }
+  },1000);
 
   $inputButton.addEventListener("click", handleInputButtonClick);
   const alphabetsArray = Array.prototype.slice.call($alphabets);
@@ -73,6 +89,7 @@ function handleStartButtonsClick() {
   });
 
   function handleAlphabetClick (event) {
+    sec = 10;
     const selectedTarget = event.target.id;
     const hasCorrectAlphabet = currentAnswer.filter((el) => {
       return selectedTarget === el;
@@ -122,6 +139,7 @@ function handleStartButtonsClick() {
 
   // input 정답 여부
   function handleInputButtonClick () {
+    sec = 10;
     const inputValue = $inputAnswer.value;
     setTimeout(function(){
       if (chanceIndex === 9) {
@@ -140,6 +158,7 @@ function handleStartButtonsClick() {
     }
 
   function showResultMeassage(isCorrect) {
+    clearInterval(timer);
     $contentContainer.className = CLASS_NAME_HIDDEN;
     hangmanImgArray.forEach((el) => {
       el.className = CLASS_NAME_UNVISIBLE_HANGMAN;

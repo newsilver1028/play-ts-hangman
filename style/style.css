@@ -92,10 +92,16 @@ body {
   flex-flow: row wrap;
 }
 
+.timer-wrapper{
+  width: 100%;
+  text-align: right;
+}
+
 .hangman-wrapper,
 .answer-wrapper {
-  height: 300px;
+  height: 230px;
   margin: 10px auto;
+  padding-bottom: 90px;
 }
 .hangman-wrapper {
   position: relative;
@@ -115,6 +121,8 @@ body {
 }
 
 .answer-wrapper {
+  display: flex;
+  flex-direction: column;
   width: 600px;
   -ms-user-select: none;
   -moz-user-select: -moz-none;
@@ -490,3 +498,5 @@ body {
     margin: 10px auto;
   }
 }
+
+
