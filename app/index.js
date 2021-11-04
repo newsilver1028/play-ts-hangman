@@ -49,14 +49,14 @@ function handleStartButtonsClick() {
   }
 
   // 타이머 기능
-  let sec = 10;
+  let sec = 20;
   const timer = setInterval(function(){
     $timer.innerHTML = sec;
     sec -=1;
     if(sec === -1){
       hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
       chanceIndex++;
-      sec = 10;
+      sec = 20;
     }
   },1000);
 
@@ -89,7 +89,7 @@ function handleStartButtonsClick() {
   });
 
   function handleAlphabetClick (event) {
-    sec = 10;
+    sec = 20;
     const selectedTarget = event.target.id;
     const hasCorrectAlphabet = currentAnswer.filter((el) => {
       return selectedTarget === el;
@@ -139,7 +139,7 @@ function handleStartButtonsClick() {
 
   // input 정답 여부
   function handleInputButtonClick () {
-    sec = 10;
+    sec = 20;
     const inputValue = $inputAnswer.value;
     setTimeout(function(){
       if (chanceIndex === 9) {
