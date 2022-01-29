@@ -1,0 +1,27 @@
+{
+  "name": "play-hangman.github.io",
+  "version": "1.0.0",
+  "description": "### Link 👉 https://newsilver1028.github.io/play-hangman.github.io/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && node dist",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newsilver1028/play-hangman.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newsilver1028/play-hangman.github.io/issues"
+  },
+  "homepage": "https://github.com/newsilver1028/play-hangman.github.io#readme",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
