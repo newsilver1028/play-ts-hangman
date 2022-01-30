@@ -1,6 +1,6 @@
 # [Hangman Game]
 
-### Link 👉 https://github.com/newsilver1028/play-hangman.github.io
+### Link 👉 https://github.com/newsilver1028/play-ts-hangman.github.io
 
 ![image](https://user-images.githubusercontent.com/79626675/136659501-9987923e-5884-4946-9c7b-885b470f0369.png)
 
