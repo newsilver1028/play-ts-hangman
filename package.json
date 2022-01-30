@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && node dist",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -17,11 +19,12 @@
   "bugs": {
     "url": "https://github.com/newsilver1028/play-hangman.github.io/issues"
   },
-  "homepage": "https://github.com/newsilver1028/play-hangman.github.io#readme",
+  "homepage": "https://github.com/newsilver1028/play-hangman.github.io",
   "devDependencies": {
     "typescript": "^4.5.5"
   },
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "lite-server": "^2.6.1"
   }
 }
