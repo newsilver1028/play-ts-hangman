@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "target": "es6",
+    "target": "es2016",
+    "module": "system",
     "outDir": "./dist",
-    "moduleResolution": "Node",
+    "esModuleInterop": true,
     "lib": [
       "ES2015",
       "DOM",
@@ -11,10 +11,7 @@
     ]
   },
   "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
+    "src"
   ],
   // "strict": true,
   // "strictNullChecks": true,
