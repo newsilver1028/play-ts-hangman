@@ -77,7 +77,6 @@ function handleStartButtonsClick() {
   $startPageWrapper.className = CLASS_NAME_HIDDEN;
   $contentContainer.className = CLASS_NAME_CONTENT_CONTAINER;
 
-  // const currentAnswer = Array.from(randomAnswer(answersList));
   const currentAnswer = [...randomAnswer(answersList)];
   currentAnswer.forEach((el: string) => {
     const $answer = document.createElement("div")! as HTMLDivElement;
@@ -127,13 +126,13 @@ function handleStartButtonsClick() {
     if (hasCorrectAlphabet.length === 0) {
       // 틀린 알파벳 색 변경.
       setTimeout(function(){
-      hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
-      chanceIndex++;
-      $alphabetsWrapper.querySelector("#" + selectedTarget).className = CLASS_NAME_WRONG_ALPHABET;
-      $alphabetsWrapper.querySelector("#" + selectedTarget).removeEventListener("click", handleAlphabetClick, false);
-      return;
-    },200);
-  }
+        hangmanImgArray[chanceIndex].className = CLASS_NAME_VISIBLE_HANGMAN;
+        chanceIndex++;
+        $alphabetsWrapper.querySelector("#" + selectedTarget).className = CLASS_NAME_WRONG_ALPHABET;
+        $alphabetsWrapper.querySelector("#" + selectedTarget).removeEventListener("click", handleAlphabetClick, false);
+        return;
+      },200);
+    }
 
   }
 
