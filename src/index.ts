@@ -139,7 +139,7 @@ function handleStartButtonsClick() {
   // input 정답 여부
   function handleInputButtonClick () {
     sec = 20;
-    const inputValue = $inputAnswer.value;
+    const inputValue: string = $inputAnswer.value;
     setTimeout(function(){
       if (chanceIndex === 9) {
         isCorrect = false;
